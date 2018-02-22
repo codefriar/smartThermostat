@@ -1,7 +1,7 @@
 {
-  "name": "IOTEmitter",
+  "name": "IOTSmartThermostat",
   "version": "1.0.0",
-  "description": "An html5 based IOT event emitter",
+  "description": "An html5 based IOT smart thermostat event emitter",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
