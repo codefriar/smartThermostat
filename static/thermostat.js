@@ -1,17 +1,17 @@
 $(document).ready(function(){
-  
+
 
   var loggedIn = $('#loggedIn');
 
   function moveToGoal() {
     var goal = $('#goalTemp');
     var current = $('#currentTemp');
-    if (loggedIn.text() == 'Sending Events'){
-      
+    if (loggedIn.text() == 'Sending Events' && goal.val() != current.val()){
+
       if (parseInt(goal.val()) > parseInt(current.val())) {
         current.val(parseInt(current.val()) + 1);
         emit();
-      } 
+      }
       if (parseInt(goal.val()) < parseInt(current.val())) {
         current.val(parseInt(current.val()) - 1);
         emit();

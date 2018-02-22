@@ -17,18 +17,30 @@ module.exports = {
 		  			}
 		  	}));
     });
-    
+
+		app.get('/status', function (req, res) {
+		  c.initControllers(m.routedinfo.init({
+		  		data:{},
+		  		extensions:[c.login],
+		  		req:req,
+		  		res:res,
+		  		handler:function(routedinfo) {
+		  			res.json({'status':'running'});
+		  			}
+		  	}));
+    });
+
     app.get('/emit', function(req, res) {
       c.initControllers(m.routedinfo.init({
         data:{},
         extensions:[c.login],
         controller:c.emit,
         action:c.emit.init_pages,
-        req: req,
+        req:req,
         res:res,
         handler: function(routedinfo){
           debug.log('emitting event');
-          res.sendStatus(200);
+          res.json({'status':'emitting'});
         }
       }));
     });

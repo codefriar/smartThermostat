@@ -9,9 +9,9 @@ module.exports = {
     routedinfo.conn = new jsforce.Connection({
       accessToken: routedinfo.req.session.accessToken,
       instanceUrl: routedinfo.req.session.instanceUrl,
-      version: '41.0'
+      version: '42.0'
     });
-    
+
     var eventData = {
       deviceId__c: 'CUCGRITU3RVWKUL8',
       temperature__c: parseFloat(routedinfo.req.query.temp)
@@ -21,6 +21,7 @@ module.exports = {
       if (err || !ret.success) { return console.error(err, ret); }
       debug.log("Created record id : " + ret.id);
     });
-
+    debug.log({'status':'emitted','temperature':parseFloat(routedinfo.req.query.temp)});
+    routedinfo.res.json({'status':'emitted','temperature':parseFloat(routedinfo.req.query.temp)});
   }
 }

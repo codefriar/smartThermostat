@@ -10,7 +10,7 @@ exports.initControllers = function(routedinfo) {
 			data = e.init(routedinfo);
 		});
   }
-  
+
 	if(routedinfo.scripts) { //hand to the client
 		routedinfo.data.scripts = routedinfo.scripts;
 	}
