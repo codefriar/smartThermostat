@@ -1,0 +1,29 @@
+{
+  "name": "IOTEmitter",
+  "version": "1.0.0",
+  "description": "An html5 based IOT event emitter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "node --inspect index.js",
+    "postinstall": "npm upgrade"
+  },
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.5.2",
+    "adm-zip": "^0.4.7",
+    "body-parser": "*",
+    "command-line-args": "^4.0.2",
+    "express": "*",
+    "express-dustjs": "*",
+    "express-session": "*",
+    "htmlparser2": "*",
+    "jquery": "^3.3.1",
+    "jsforce": "*",
+    "shake.js": "^1.2.2",
+    "sync-request": "^4.0.1",
+    "then-request": "^2.2.0",
+    "underscore": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}

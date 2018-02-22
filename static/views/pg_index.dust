@@ -1,0 +1,75 @@
+{>"tmpl_main"/}
+  <script src="/jquery/jquery.js"></script>
+  <script src="/thermostat.js"></script>
+
+{<title}IOT Smart Thermostat{/title}
+{<body_content}
+  <div></div>
+  <div class="slds-container_fluid">
+    <article class="slds-card ">
+      <div class="slds-card__header slds-grid">
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+          <div class="slds-media__figure">
+            <span class="slds-icon_container slds-icon-custom-custom5">
+              <svg class="slds-icon">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/slds/icons/custom-sprite/svg/symbols.svg#custom5"></use>
+              </svg>
+            </span>
+          </div>
+          <div class="slds-media__body">
+            <h2>
+              <a class="slds-card__header-link slds-truncate" href="javascript:void(0);">
+                <span class="slds-text-heading_small">Your Thermostat</span>
+              </a>
+            </h2>
+          </div>
+        </header>
+
+      </div>
+      <div class="slds-card__body slds-card__body_inner">
+        <div class="slds-grid slds-grid_align- slds-grid_vertical-align- slds-grid_pull-padded-medium">
+          <div class="slds-col slds-p-horizontal_medium">
+            <div class="slds-form-element ">
+              <label class="slds-form-element__label">Goal Temp</label>
+              <div class="slds-form-element__control">
+                <input class="slds-input" type="text" id="goalTemp" value="100">
+              </div>
+            </div>
+          </div>
+          <div class="slds-col slds-p-horizontal_medium">
+            <div class="slds-form-element ">
+              <label class="slds-form-element__label">Current Temp</label>
+              <div class="slds-form-element__control">
+                <input class="slds-input" type="text" id="currentTemp" value="86">
+              </div>
+            </div>
+          </div>
+          <div class="slds-col slds-p-horizontal_medium">
+            <div class="slds-form-element ">
+              <span class="slds-form-element__label">Sending Events</span>
+              <div class="slds-form-element__control">
+                <span class="slds-form-element__static">
+                  <div class="slds-button-group" role="group">
+                    {@eq key=login value="true" type="boolean"}
+                    <a href="/oauth/auth">
+                      <button class="slds-button slds-button--neutral">Not yet - please login</button>
+                    </a>
+                    {:else}
+                    <a href="#">
+                      <button class="slds-button slds-button--neutral" id="loggedIn" >Sending Events</button>
+                    </a>
+                    {/eq}
+                  </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  
+  
+{/body_content}
